@@ -36,14 +36,15 @@ div:hover {
   transition-timing-function: ease-in-out;
 }
 
-h1 {
+h3 {
   text-align: center;
   letter-spacing: 1px;
   margin: 2rem auto;
+  font-size: 1.5rem;
 }
 
 @media all and (max-width: 450px) {
-  h1 {
+  h3 {
     font-size: 1.5rem;
   }
   .color {

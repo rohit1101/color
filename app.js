@@ -26,9 +26,6 @@ function randomizeColor() {
 }
 
 const handleClick = event => {
-  console.log(event.keyCode);
-  if (event.keyCode) {
-  }
   const color = `#${randomizeColor()}${randomizeColor()}${randomizeColor()}${randomizeColor()}${randomizeColor()}${randomizeColor()}`;
   document.body.style.backgroundColor = color;
   c.classList.add('color');
@@ -38,7 +35,7 @@ const handleClick = event => {
 
 const handleKey = event => {
   console.log(event.keyCode);
-  if (event.keyCode) {
+  if (event.keyCode === 32) {
     const color = `#${randomizeColor()}${randomizeColor()}${randomizeColor()}${randomizeColor()}${randomizeColor()}${randomizeColor()}`;
     document.body.style.backgroundColor = color;
     c.classList.add('color');
@@ -46,6 +43,14 @@ const handleKey = event => {
     document.body.appendChild(c);
   }
 };
+
+// window.setTimeout(() => {
+//   handleClick();
+// }, 2000);
+
+// window.setInterval(() => {
+//   handleClick();
+// }, 5000);
 
 divEl.addEventListener('click', handleClick);
 window.addEventListener('keydown', handleKey);
